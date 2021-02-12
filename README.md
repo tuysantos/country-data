@@ -4,10 +4,24 @@ This application displays a set of informations about a particular capital in Eu
 
 # Tools
 
-Angular 11.1.4
-NgRx 11.0
-RxJs 6.6
-TypeScript 4.1.2
+Angular 11.1.4, 
+NgRx 11.0, 
+RxJs 6.6, 
+TypeScript 4.1.2, 
+Jasmine 3.6, 
+Karma 5.2
+
+# Istructions
+
+To view the details of a particular capital you must select first a region and then a specific country.
+
+The application caches the API requests. Whenever a request is done to the application checks if this requests is already cache before executing a new request.
+
+The componentes are organised by features and can be ported to a different application.
+
+# What could I've done if I had more time?
+
+Improve the UI (add Angular Material and more css). It is very basic because the idea was to get it working first. 
 
 ## Development server
 
