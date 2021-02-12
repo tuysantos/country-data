@@ -1,0 +1,60 @@
+<div>
+    <div>
+        <app-region (regionEvent)="regionEventTrigger($event)"></app-region>
+    </div>
+    <div>
+        <app-country [region]="region" (countryEvent)="displayCountryData($event)"></app-country>
+    </div>
+    <div *ngIf="apiState === 'Done' && country" class="container">
+        <table class="country">
+            <tr>
+                <th colspan="2">Country Details</th>
+            </tr>
+            <tr>
+                <td>
+                    <table class="country-details">
+                        <tr>
+                            <th class="country-details--label">Country</th>
+                            <td class="country-details--data">{{country.name}}</td>
+                        </tr>
+            
+                        <tr>
+                            <th class="country-details--label">Capital</th>
+                            <td class="country-details--data">{{country.capital}}</td>
+                        </tr>
+            
+                        <tr>
+                            <th class="country-details--label">Population</th>
+                            <td class="country-details--data">{{country.population}}</td>
+                        </tr>
+            
+                        <tr>
+                            <th class="country-details--label country-details--currencies  top-align">Currencies</th>
+                            <td class="country-details--data">
+                                <table class="currency">
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Name</th>
+                                        <th>Symbol</th>
+                                    </tr>
+                                    <tr *ngFor="let currency of country.currencies">
+                                        <td>{{currency.code}}</td>
+                                        <td>{{currency.name}}</td>
+                                        <td>{{currency.symbol}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="top-align"><img class="country-flag" [src]="country.flag" /></td>
+            </tr>
+
+
+        </table>
+
+    </div>
+    <div *ngIf="apiState === 'Pending'">
+        Loading data ...
+    </div>
+</div>

@@ -1,0 +1,42 @@
+
+.container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px
+}
+.country {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 300px;
+    border: 1px solid #000;
+    .country-details {
+        font-size: 16px;
+        font-weight: 500;
+        .country-details--label {
+            text-align: left;
+        }
+
+        .country-details--data {
+            text-align: left;
+            margin-left: 20px;
+        }
+    }
+
+    .country-flag {
+        vertical-align: top;
+        width: 40px;
+    }
+}
+
+.currency {
+    border: 1 solid #000;
+    th { 
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+.top-align {
+    vertical-align: top;
+}

@@ -1,0 +1,8 @@
+<div class="region">
+    <label class="region-label">Region:</label>
+    <select class="region-select" (change)="selectRegion($event.target.value)">
+        <option value=''>Select a Region</option>
+        <option *ngFor="let region of regionList" [value]="region.name">{{region.name}}</option>
+    </select>
+</div>
+

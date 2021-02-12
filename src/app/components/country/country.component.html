@@ -1,0 +1,8 @@
+
+<div class="country">
+    <label class="country-label">Country:</label>
+    <select class="country-select" (change)="selectCountry($event.target.value)">
+        <option value=''>Select a Country</option>
+        <option *ngFor="let country of dropDownList" [value]="country.name">{{country.name}}</option>
+    </select>
+</div>
